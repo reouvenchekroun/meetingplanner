@@ -1,0 +1,35 @@
+<div class="main-area">
+  <div class="content-area">
+    <div class="header">
+      <h1>Manage meetings</h1>
+      <hr>
+    </div>
+    <div class="container">
+      <!--Add meeting form-->
+      <div class="form-area">
+        <h3>Create meeting</h3>
+        <form #meetingsForm="ngForm" (ngSubmit)="onMeetingCreate(meetingsForm.value)">
+          <label>Meeting Name</label>
+          <input type="text" name="name" ngModel>
+      
+          <label>Meeting Type</label>
+          <input type="text" name="type" ngModel>
+      
+          <label>Meeting Date (yyyy-MM-dd)</label>
+          <input type="text" name="date" ngModel>
+
+          <label>Meeting Start</label>
+          <input type="text" name="start" ngModel>
+
+          <label>Meeting End</label>
+          <input type="text" name="end" ngModel>
+
+          <label>Meeting Attendees</label>
+          <input type="text" name="attendees" ngModel>
+
+          <input type="submit" value="Add meeting">
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
